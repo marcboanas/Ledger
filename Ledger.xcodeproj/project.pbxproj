@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14768D534470D63F8A891211 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3A0D56DBF3B15C4E485770 /* libPods.a */; };
 		6F766D4D1B4A8C01008B3858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F766D4C1B4A8C01008B3858 /* AppDelegate.swift */; };
 		6F766D501B4A8C01008B3858 /* Ledger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F766D4E1B4A8C01008B3858 /* Ledger.xcdatamodeld */; };
 		6F766D521B4A8C01008B3858 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F766D511B4A8C01008B3858 /* ViewController.swift */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B3A0D56DBF3B15C4E485770 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5726D1A530D81DF5B640F8D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6F766D471B4A8C01008B3858 /* Ledger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ledger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F766D4B1B4A8C01008B3858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F766D4C1B4A8C01008B3858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		6F766D5F1B4A8C01008B3858 /* LedgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LedgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F766D641B4A8C01008B3858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F766D651B4A8C01008B3858 /* LedgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerTests.swift; sourceTree = "<group>"; };
+		F8A78D267436030FF270AFE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14768D534470D63F8A891211 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0814B4D97CDF6B4F7B43F952 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B3A0D56DBF3B15C4E485770 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6F766D3E1B4A8C01008B3858 = {
 			isa = PBXGroup;
 			children = (
 				6F766D491B4A8C01008B3858 /* Ledger */,
 				6F766D621B4A8C01008B3858 /* LedgerTests */,
 				6F766D481B4A8C01008B3858 /* Products */,
+				98D52566211B506D53E6BB13 /* Pods */,
+				0814B4D97CDF6B4F7B43F952 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +130,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		98D52566211B506D53E6BB13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5726D1A530D81DF5B640F8D0 /* Pods.debug.xcconfig */,
+				F8A78D267436030FF270AFE6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F766D691B4A8C01008B3858 /* Build configuration list for PBXNativeTarget "Ledger" */;
 			buildPhases = (
+				A26F244FDC764A5D72D54712 /* Check Pods Manifest.lock */,
 				6F766D431B4A8C01008B3858 /* Sources */,
 				6F766D441B4A8C01008B3858 /* Frameworks */,
 				6F766D451B4A8C01008B3858 /* Resources */,
+				AB885DAA40C61F44D844572E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +235,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A26F244FDC764A5D72D54712 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB885DAA40C61F44D844572E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F766D431B4A8C01008B3858 /* Sources */ = {
@@ -342,6 +401,7 @@
 		};
 		6F766D6A1B4A8C01008B3858 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5726D1A530D81DF5B640F8D0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ledger/Info.plist;
@@ -352,6 +412,7 @@
 		};
 		6F766D6B1B4A8C01008B3858 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A78D267436030FF270AFE6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ledger/Info.plist;
@@ -413,6 +474,7 @@
 				6F766D6B1B4A8C01008B3858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F766D6C1B4A8C01008B3858 /* Build configuration list for PBXNativeTarget "LedgerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +483,7 @@
 				6F766D6E1B4A8C01008B3858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
